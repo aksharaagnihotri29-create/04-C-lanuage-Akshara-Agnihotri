@@ -1,0 +1,83 @@
+Relational operator
+#include <stdio.h>
+int main()
+{
+    int a = 10, b = 5;
+
+    printf("%d\n", a>b);
+    printf("%d\n", a<b);
+    printf("%d\n", a==b);
+    printf("%d\n", a!=b);
+    printf("%d\n", a>=b);
+    printf("%d\n", a<=b);
+
+    return 0;
+}
+output
+1
+0
+0
+1
+1
+0
+logical operator
+#include <stdio.h>
+int main()
+{
+    int a = 10, b = 5;
+
+    printf("%d\n", a>b && b>0);
+    printf("%d\n", a<b || b>0);
+    printf("%d\n", !(a>b));
+
+    return 0;
+}
+output
+1
+1
+0
+assignment operator
+#include <stdio.h>
+int main()
+{
+    int a = 10;
+
+    a += 5;
+    printf("%d\n", a);
+
+    a -= 2;
+    printf("%d\n", a);
+
+    a *= 2;
+    printf("%d\n", a);
+
+    a /= 2;
+    printf("%d\n", a);
+
+    return 0;
+}
+output
+15
+13
+26
+13
+increment decrement operator
+#include <stdio.h>
+int main()
+{
+    int a = 10;
+
+    a++;
+    printf("Increment = %d\n", a);
+
+    a--;
+    printf("Decrement = %d\n", a);
+
+    return 0;
+}
+output
+Increment = 11
+Decrement = 10
+
+
+out
