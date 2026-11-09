@@ -1,0 +1,191 @@
+
+/*  Size of Data Types */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    clrscr();
+
+    printf("Size of int = %d bytes\n", sizeof(int));
+    printf("Size of float = %d bytes\n", sizeof(float));
+    printf("Size of double = %d bytes\n", sizeof(double));
+    printf("Size of char = %d byte", sizeof(char));
+
+    getch();
+}
+
+/* Output:
+Size of int = 2 bytes
+Size of float = 4 bytes
+Size of double = 8 bytes
+Size of char = 1 byte
+*/
+
+
+/* Positive, Negative or Zero using Ternary Operator */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int n;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    n > 0 ? printf("Positive") : n < 0 ? printf("Negative") : printf("Zero");
+
+    getch();
+}
+
+/* Output:
+Enter a number: -5
+Negative
+*/
+
+
+/* Quotient and Remainder */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a, b, q, r;
+    clrscr();
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    q = a / b;
+    r = a % b;
+
+    printf("Quotient = %d\n", q);
+    printf("Remainder = %d", r);
+
+    getch();
+}
+
+/* Output:
+Enter two numbers: 17 5
+Quotient = 3
+Remainder = 2
+*/
+
+
+/* Even or Odd using Ternary Operator */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int n;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    n % 2 == 0 ? printf("Even") : printf("Odd");
+
+    getch();
+}
+
+/* Output:
+Enter a number: 8
+Even
+*/
+
+
+/* Largest Among Three Numbers */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a, b, c, largest;
+    clrscr();
+
+    printf("Enter three numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    if(a >= b && a >= c)
+        largest = a;
+    else if(b >= a && b >= c)
+        largest = b;
+    else
+        largest = c;
+
+    printf("Largest = %d", largest);
+
+    getch();
+}
+
+/* Output:
+Enter three numbers: 10 25 15
+Largest = 25
+*/
+
+
+/* Fahrenheit to Celsius */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    float f, c;
+    clrscr();
+
+    printf("Enter Fahrenheit: ");
+    scanf("%f", &f);
+
+    c = (f - 32) * 5 / 9;
+
+    printf("Celsius = %.2f", c);
+
+    getch();
+}
+
+/* Output:
+Enter Fahrenheit: 98.6
+Celsius = 37.00
+*/
+
+
+/* Area and Perimeter of Rectangle */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    float l, b, area, perimeter;
+    clrscr();
+
+    printf("Enter length: ");
+    scanf("%f", &l);
+
+    printf("Enter breadth: ");
+    scanf("%f", &b);
+
+    area = l * b;
+    perimeter = 2 * (l + b);
+
+    printf("Area = %.2f\n", area);
+    printf("Perimeter = %.2f", perimeter);
+
+    getch();
+}
+
+/* Output:
+Enter length: 10
+Enter breadth: 5
+Area = 50.00
+Perimeter = 30.00
+*/
