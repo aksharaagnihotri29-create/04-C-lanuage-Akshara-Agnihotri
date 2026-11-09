@@ -1,0 +1,351 @@
+
+/* CHECK WHETHER A CHARACTER IS AN ALPHABET OR NOT */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+    {
+        printf("It is an Alphabet");
+    }
+    else
+    {
+        printf("It is not an Alphabet");
+    }
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter a character: A
+It is an Alphabet
+*/
+
+
+/* SWAP TWO NUMBERS WITHOUT USING THIRD VARIABLE */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After swapping: %d %d", a, b);
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter two numbers: 10 20
+After swapping: 20 10
+*/
+
+
+/* SWAP TWO NUMBERS USING THIRD VARIABLE */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int a, b, temp;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("After swapping: %d %d", a, b);
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter two numbers: 5 10
+After swapping: 10 5
+*/
+
+
+/* FIND FACTORIAL OF A NUMBER USING FOR LOOP */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n, i, fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+
+    printf("Factorial = %d", fact);
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter a number: 5
+Factorial = 120
+*/
+
+
+/* DISPLAY FIBONACCI SERIES USING FOR LOOP */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n, a = 0, b = 1, c, i;
+
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        printf("%d ", a);
+
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter number of terms: 7
+0 1 1 2 3 5 8
+*/
+
+
+/* FIND GCD OF TWO NUMBERS */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int a, b, i, gcd = 1;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    for(i = 1; i <= a && i <= b; i++)
+    {
+        if(a % i == 0 && b % i == 0)
+        {
+            gcd = i;
+        }
+    }
+
+    printf("GCD = %d", gcd);
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter two numbers: 12 18
+GCD = 6
+*/
+
+
+/* FIND LCM OF TWO NUMBERS */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int a, b, max, lcm;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    if(a > b)
+        max = a;
+    else
+        max = b;
+
+    lcm = max;
+
+    while(1)
+    {
+        if(lcm % a == 0 && lcm % b == 0)
+        {
+            break;
+        }
+
+        lcm++;
+    }
+
+    printf("LCM = %d", lcm);
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter two numbers: 4 6
+LCM = 12
+*/
+
+
+/* CALCULATE SUM OF NATURAL NUMBERS USING FOR LOOP */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n, i, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter a number: 5
+Sum = 15
+*/
+
+
+/* CHECK WHETHER A NUMBER IS PALINDROME OR NOT USING FOR LOOP */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n, temp, rem, rev = 0, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    for(i = n; i > 0; i = i / 10)
+    {
+        rem = i % 10;
+        rev = rev * 10 + rem;
+    }
+
+    if(temp == rev)
+    {
+        printf("Palindrome Number");
+    }
+    else
+    {
+        printf("Not a Palindrome Number");
+    }
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter a number: 121
+Palindrome Number
+*/
+
+
+/* CHECK WHETHER A NUMBER IS ARMSTRONG OR NOT USING FOR LOOP */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n, temp, rem, sum = 0;
+    int count = 0, power, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    for(; temp > 0; temp = temp / 10)
+    {
+        count++;
+    }
+
+    temp = n;
+
+    for(; temp > 0; temp = temp / 10)
+    {
+        rem = temp % 10;
+        power = 1;
+
+        for(i = 1; i <= count; i++)
+        {
+            power = power * rem;
+        }
+
+        sum = sum + power;
+    }
+
+    if(sum == n)
+    {
+        printf("Armstrong Number");
+    }
+    else
+    {
+        printf("Not an Armstrong Number");
+    }
+
+    getch();
+    return 0;
+}
+
+/*
+OUTPUT:
+Enter a number: 153
+Armstrong Number
+*/
